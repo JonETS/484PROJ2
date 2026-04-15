@@ -255,7 +255,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       const image = document.createElement('img');
       image.id = imageID;
       image.classList = "pet-image";
-      image.src = 'images/heavy.webp';//have to use src for filter to apply to it
+      image.src = randomImage();
       visual.append(image);
       
       //create options section
@@ -276,6 +276,16 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       main.append(article); //add article as child of main
       $(article).hide().stop(true,true).fadeIn(2000);//hide() makes the element not visible, lets the fadeIn happen
 
+    }
+    function randomImage(){
+      var img;
+      if(counter % 5 == 0){
+        img = 'images/notourpyro.webp';
+      }
+      else{
+        img= 'images/pyro.png';
+      }
+      return img;
     }
     //----------------------------------------------------
 
